@@ -29,7 +29,7 @@ $ docker-compose up --scale spark-worker=3
 ```
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/docker_ps.png">
 
-##### To check your cluster alive or not, to open the spark cluster web UI, type the following in your browser
+##### To check your cluster is alive or not, to open the spark cluster web UI, type the following in your browser
 [localhost:9090](https:localhost:9090)
 
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/webUI.png">
@@ -45,7 +45,8 @@ $ SPARK_PY_APPLICATION=Path-Of-Your-App-In-Locally
 $ docker run --network docker-spark-cluster_default 
 -v /home/size7311/docker-spark-cluster/apps:/opt/spark-apps \
 -v /home/size7311/docker-spark-cluster/data:/opt/spark-data \
---env SPARK_PY_APPLICATION=$SPARK_PY_APPLICATION \ spark-submit:latest
+--env SPARK_PY_APPLICATION=$SPARK_PY_APPLICATION \ 
+spark-submit:latest
 ```
 
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/result.png">
