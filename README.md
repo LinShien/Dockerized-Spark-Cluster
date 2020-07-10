@@ -23,20 +23,24 @@ $ docker images   # check the images you just build
 
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/docker_images.png">
 
+
+
 ### 2.Run all containers
 ```sh
 $ docker-compose up --scale spark-worker=3
 ```
-<img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/docker_ps.png">
+<img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/docker_ps.png" height = 75>
 
 ##### To check your cluster is alive or not, to open the spark cluster web UI, type the following in your browser
 [localhost:9090](https:localhost:9090)
 
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/webUI.png">
 
-<img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/spark_master.png">
+<img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/spark_master.png" height>
 
-### To Run Your Spark Application
+
+
+### 3.Submit Your Spark Application
 ##### Your have to run a submit container to submit your app to spark cluster 
 > 這裡我用修改後的 [sparkLoader.py](https://github.com/LinShien/Covid19-Analytics-With-Spark/blob/master/sparkLoader.py) 做測試
 ```sh
@@ -51,7 +55,9 @@ spark-submit:latest
 
 <img src="https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/images/result.png">
 
-### To tune the performance
+
+
+### 4.To tune the performance
   - Deploy the worker node on different 'machines' instead of a local machine
   - Modify the [docker/spark-submit/spark-submit.sh](https://github.com/LinShien/Dockerized-Spark-Cluster/blob/master/docker/spark-submit/spark-submit.sh)
   
